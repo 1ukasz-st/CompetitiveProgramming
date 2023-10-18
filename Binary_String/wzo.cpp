@@ -36,7 +36,6 @@ int main(){
 
         next_test:
         free(t);
-
         free(sp0);
         free(sp1);
     }
