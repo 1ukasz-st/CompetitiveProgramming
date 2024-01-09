@@ -2,11 +2,15 @@
 
 using namespace std;
 
+typedef long long ll;
+
 int main(){
 
-    int x=0;
-    cin>>x;
-    cout<<int(__lg(2*x-1));
+    int q;
+    cin>>q;
+    while(q--){
+
+    }
 
     return 0;
 }

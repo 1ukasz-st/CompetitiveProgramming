@@ -4,17 +4,22 @@
 		{
 			"type": "shell",
 			"label": "Compile C++",
-			"command": "g++ -o '${fileDirname}\\${fileBasenameNoExtension}.exe' '${file}' -std=c++17 -Wall -Wextra -pedantic-errors -std=c++17 -O3 -march=native -mtune=native",
+			"command": "g++ -o '${fileDirname}/${fileBasenameNoExtension}' '${file}' -std=c++20 -fconcepts -Wall -Wextra -pedantic-errors -std=c++17 -O3 -march=native -mtune=native",
 		},
 		{
 			"type": "shell",
 			"label": "Run C++",
-			"command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+			"command": "${fileDirname}/${fileBasenameNoExtension}",
 		},
 		{
 			"type": "shell",
 			"label": "Run Python",
-			"command": "python '${fileDirname}\\${fileBasenameNoExtension}.py'",
+			"command": "python '${fileDirname}/${fileBasenameNoExtension}.py'",
+		},
+		{
+			"type": "shell",
+			"label": "Fill C++ File with template",
+			"command": "cat .vscode/template_cpp.cpp > ${file}",
 		},
 	]
 }
